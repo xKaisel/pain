@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<link Href="./Stili/Stile.css" rel="stylesheet" type="text/css">
+			<TITLE>
+					Gestione input – GestioneInput_Controlli - Index
+			</TITLE>
+			<script language="javascript" type="text/javascript">
+				function operazioni()
+				{
+					var addi,sottr,divi,mol;
+					var num1;					
+					num1 = parseInt(document.getElementById("textbox1").value);
+					var num2;
+					num2 = parseInt(document.getElementById("textbox2").value);
+					if (document.getElementById("cb1").checked)
+					{			
+						addi = parseInt(num1+num2);											
+						document.getElementById("pOutput").innerText="\nSomma: " + addi;
+					}
+					else
+					{
+						document.getElementById("pOutput").innerText = "";
+					}
+					if(document.getElementById("cb2").checked)
+					{
+						sottr = parseInt(num1-num2);				
+						document.getElementById("pOutput1").innerText="\nSottrazione: " + sottr;
+					}
+					else
+					{
+						document.getElementById("pOutput1").innerText = "";
+					}
+					if(document.getElementById("cb3").checked)
+					{
+						mol = parseInt(num1*num2);					
+						document.getElementById("pOutput2").innerText="\nMoltiplicazione: " + mol;
+					}
+					else
+					{
+						document.getElementById("pOutput2").innerText = "";
+					}
+					if(document.getElementById("cb4").checked)
+					{
+						divi = parseInt(num1/num2);					
+						document.getElementById("pOutput3").innerText="\nDivisione: " + divi;
+					}
+					else
+					{
+						document.getElementById("pOutput3").innerText = "";
+					}
+					
+				}
+			</script>
+			<BODY>
+				<div id="intestazione">
+				</div>
+				<div id="divsx">
+					<p>
+						<a href="Index.html">Home</a>
+					</p>
+					<p>
+						<a href="QuattroOperazioni.html">Quattro Operazioni</a>
+					</p>
+					<p>
+						<a href="Quadrato.html">Quadrato</a>
+					</p>
+					<p>
+						<a href="Triangolo.html">Triangolo</a>
+					</p>
+					<p>
+						<a href="Indovina.html">Indovina</a>
+					</p>
+					<p>
+						<a href="Lista operazioni figure geometriche.html">Lista operazioni figure geometriche</a>
+					</p>
+					<p>
+						<a href="Lista formule figure geometriche.html">Lista formule figure geometriche</a>
+					</p>
+				</div>
+				<div id="divcx">
+					<p>
+						Primo Numero:<input type="text" id="textbox1" name="textbox1" value=""/><br>
+						Secondo Numero:<input type="text" id="textbox2" name="textbox2" value=""/><br><br>
+						
+						addizione:<input type="checkbox" id="cb1" name="checkBox1" value=""/>
+						sottrazione:<input type="checkbox" id="cb2" name="checkBox2" value=""/>
+						Moltipliazione:<input type="checkbox" id="cb3" name="checkBox3" value=""/>
+						Divisione:<input type="checkbox" id="cb4" name="checkBox4" value=""/><br>
+						
+						<input type="submit" id="button1" name="button1" value="prosegui" onclick="operazioni()"/>
+						<hr>
+					</p>
+					<p id="pOutput" name="pOutput">
+						
+					</p>
+					<p id="pOutput1" name="pOutput">
+						
+					</p>
+					<p id="pOutput2" name="pOutput">
+						
+					</p>
+					<p id="pOutput3" name="pOutput">
+						
+					</p>
+				</div>
+				<div id="divdx">
+					<img src="./Immagini/5.jpg" style="width:200px;hight:150px"/>
+				</div>
+			</BODY>
+	</HEAD>
+</HTML>

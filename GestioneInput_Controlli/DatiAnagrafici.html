@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<link Href="./Stili/Stile.css" rel="stylesheet" type="text/css">
+			<TITLE>
+					Gestione input – GestioneInput_Controlli - Index
+			</TITLE>
+			<script language="javascript" type="text/javascript">
+				function Conferma()
+				{										
+					var nome,cognome,nomeutente;
+					nome=document.getElementById("textbox1").value;
+					cognome=document.getElementById("textbox2").value;
+					nomeutente=document.getElementById("textbox3").value;
+					document.getElementById("pOutput").innerText="Nome= "+nome+" "+cognome+" "+"\nId ="+nomeutente;
+				
+					var password,confpass;
+					password=document.getElementById("textbox4").value;
+					confpass=document.getElementById("textbox5").value;
+					if(password==confpass)
+					{
+						document.getElementById("pOutput1").innerText="La password corrisponde";
+					}
+					else
+					{
+						alert("Le password sono diverse");
+					}
+					
+					var data;
+					data = document.getElementById("textbox6").value + "/" + document.getElementById("lista1").value + "/" +document.getElementById("textbox7").value;
+					document.getElementById("pOutput2").innerText="Data di nascita ="+ data;
+					
+					
+					if(document.getElementById('sessomaschio').checked)
+					{
+						document.getElementById("pOutput3").innerText="Sesso : Maschio";
+					}
+					else if(document.getElementById('sessofemmina').checked)
+					{
+						document.getElementById("pOutput3").innerText="Sesso : Femmina";
+					}
+					else if(document.getElementById('nonspec').checked)
+					{
+						document.getElementById("pOutput3").innerText="Sesso : non specificato";
+					}
+					else
+					{
+						document.getElementById("pOutput3").innerText="Nessun sesso selezionato";
+					}
+					
+					
+					var numtel;
+					numetel = document.getElementById("lista2").value +" "+ document.getElementById("textbox8").value;
+					document.getElementById("pOutput4").innerText="Numero telefonico : " + numetel;
+					
+					
+					var email;
+					email= document.getElementById("textbox9").value;
+					document.getElementById("pOutput5").innerText="E-mail : " + email;
+					
+					
+					if (document.getElementById("cb").checked)
+					{
+						alert("Google impostato come browser predefinito");
+					}
+					
+					
+					var paese=document.getElementById("lista3").value;
+					document.getElementById("pOutput6").innerText="Paese : " + paese;
+				}
+			</script>
+			<BODY>
+				<div id="intestazione">
+				</div>
+				<div id="divsx">
+					<p>
+						<a href="Index.html">Home</a>
+					</p>
+					<p>
+						<a href="DatiAnagrafici.html">Dati Anagrafici</a>
+					</p>
+
+				</div>
+				<div id="divcx">
+					<p style=" font-weight:bold";>
+						Nome:<input type="text" id="textbox1" name="textbox1" value=""/> Cognome:<input type="text" id="textbox2" name="textbox2" value=""/><br><br>
+						Nome Utente:<input type="text" id="textbox3" name="textbox3" value=""/><br><br>
+						
+						Crea password:<input type="text" id="textbox4" name="textbox4" value=""/><br>
+						Conferma password:<input type="text" id="textbox5" name="textbox5" value=""/><br><br>
+						
+						Data di nascita<br>
+						Anno:<input type="text" id="textbox6" name="textbox6" value=""/>
+						<select id="lista1" name ="lista1">
+							<option selected>Gennaio</option>							
+							<option value="Febbraio">Febbraio</option>
+							<option value="Marzo">Marzo</option>
+							<option value="Aprile">Aprile</option>
+							<option value="Maggio">Maggio</option>
+							<option value="Giugno">Giugno</option>
+							<option value="Luglio">Luglio</option>
+							<option value="Agosto">Agosto</option>
+							<option value="Settembre">Settembre</option>
+							<option value="Ottobre">Ottobre</option>
+							<option value="Novembre">Novembre</option>
+							<option value="Dicembre">Dicembre</option>						
+						</select>
+						Giorno:<input type="text" id="textbox7" name="textbox7" value=""/><br><br>
+						
+						Seleziona il sesso:<br>				
+						Non Specificato<input type="Radio" id="nonspec" name="radio1"><br>
+						Maschio<input type="Radio" id="sessomaschio" name="radio2"><br>
+						Femmina<input type="Radio" id="sessofemmina" name="radio3"><br>						
+						<br>
+						
+						Numero telefonico:
+						<select id="lista2" name ="lista2">
+							<option selected>+39</option>							
+							<option value="14">+14</option>
+							<option value="16">+16</option>
+						</select>
+						<input type="text" id="textbox8" name="textbox8" value=""/><br><br>
+						
+						Indirizzo E-mail:
+						<input type="text" id="textbox9" name="textbox9" value=""/><br><br>
+						
+						Vuoi selezionare Google come pagina predefinita?
+						<input type="checkbox" id="cb" name="checkBox1" value=""/><br><br>
+						
+						Paese:
+						<select id="lista3" name ="lista3">
+							<option selected>Italia</option>							
+							<option value="Francia">Francia</option>
+							<option value="Germania">Germania</option>
+						</select><br><br>
+						
+						<input type="submit" id="button1" name="button1" value="Passaggio successivo" onclick="Conferma()"/>
+					</p>
+					<p id="pOutput" name="pOutput">
+						
+					</p>
+					<p id="pOutput1" name="pOutput">
+						
+					</p>
+					<p id="pOutput2" name="pOutput">
+						
+					</p>
+					<p id="pOutput3" name="pOutput">
+						
+					</p>
+					<p id="pOutput4" name="pOutput">
+						
+					</p>
+					<p id="pOutput5" name="pOutput">
+						
+					</p>
+					<p id="pOutput6" name="pOutput">
+						
+					</p>
+				</div>
+				<div id="divdx">
+					<img src="./Immagini/5.jpg" style="width:200px;hight:150px"/>
+				</div>
+			</BODY>
+	</HEAD>
+</HTML>

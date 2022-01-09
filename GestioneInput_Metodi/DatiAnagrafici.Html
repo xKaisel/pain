@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<HTML>
+		<HEAD>
+		<link Href="./Stili/Stile.css" rel="stylesheet" type="text/css">
+				<TITLE>
+					Gestione Input - Dati Anagrafici - DatiAnagrafici
+				</TITLE>
+				<script language="javascript" type="text/javascript">
+				
+					function InputOutput()
+					{
+						var cognome;
+						cognome=document.getElementById("textbox1").value;
+						var nome;
+						nome=document.getElementById("textbox2").value;
+						var LuogoNasc;
+						LuogoNasc=document.getElementById("textbox14").value;
+						var DataNasc;
+						DataNasc=document.getElementById("textbox3").value;
+						var Domicilio;
+						Domicilio=document.getElementById("textbox4").value;
+						var Città;
+						Città=document.getElementById("textbox5").value;
+						var Provincia;
+						Provincia=document.getElementById("textbox6").value;
+						var Stato;
+						Stato=document.getElementById("textbox7").value;
+						var ConTel;
+						ConTel=document.getElementById("textbox8").value;
+						var ConEmail;
+						ConEmail=document.getElementById("textbox9").value;
+						var SportPref;
+						SportPref=document.getElementById("textbox10").value;
+						var SportPrat;
+						SportPrat=document.getElementById("textbox11").value;
+						var SquadCuore;
+						SquadCuore=document.getElementById("textbox12").value;
+						var CittàPref;
+						CittàPref=document.getElementById("textbox13").value;
+						
+						document.getElementById("pOutput").innerText="\nCognome: " +cognome + "\nNome : " + nome + "\nLuogo nascita: " + LuogoNasc + "\nDataNascita : " + DataNasc + "\nDomicilio: " +Domicilio + "\nCittà : " + Città + "\nProvincia: " +Provincia+ "\nStato: "+ Stato + " \nContatto: " + ConTel + "\nContattoMail : " + ConEmail + "\nSportPreferito : " + SportPref + "\nSportPraticato : " + SportPrat + "\nSquadra del cuore : " + SquadCuore + "\nCittàPreferita: " + CittàPref;
+					}
+				</script>
+			</HEAD>
+				<BODY>
+				<div id="intestazione">
+				
+				</div>
+				<div id="divsx">
+					<p>
+						<a href="Index.html">Home</a>
+					</p>
+					<p>
+						<a href="DatiAnagrafici.html">Dati Anagrafici</a>
+					</p>
+				</div>
+				<div id="divcx">
+					<p style="font-size:30px">
+						Dati Anagrafici - Dati
+					</p>
+					<p style="font-size:18">
+						Cognome <input type="text" id="textbox1" name="textbox1" value=""/>
+						<br>
+						Nome <input type="text" id="textbox2" name="textbox2" value=""/>
+						<br>
+						Luogo di Nascita <input type="text" id="textbox14" name="textbox14" value=""/>
+						<br>
+						Data di Nascita <input type="text" id="textbox3" name="textbox3" value=""/>
+						<br>
+						Domicilio <input type="text" id="textbox4" name="textbox4" value=""/>
+						<br>
+						Città <input type="text" id="textbox5" name="textbox5" value=""/>
+						<br>
+						Provincia <input type="text" id="textbox6" name="textbox6" value=""/>
+						<br>
+						Stato <input type="text" id="textbox7" name="textbox7" value=""/>
+						<br>
+						Contatto telefonico <input type="text" id="textbox8" name="textbox8" value=""/>
+						<br>
+						Contatto email <input type="text" id="textbox9" name="textbox9" value=""/>
+						<br>
+						Sport preferito <input type="text" id="textbox10" name="textbox10" value=""/>
+						<br>
+						Sport praticato <input type="text" id="textbox11" name="textbox11" value=""/>
+						<br>
+						Squadra del cuore <input type="text" id="textbox12" name="textbox12" value=""/>
+						<br>
+						Città preferita <input type="text" id="textbox13" name="textbox13" value=""/>
+						<br>
+						<input type="submit" id="button1" name="button1" value="Premi" onclick="InputOutput()" />
+						<hr>
+					</p>
+					<p id="pOutput">
+					
+					</p>
+				</div>
+				<div id="divdx">
+					<img src="./Immagini/5.jpg" style="width:200px;hight:150px"/>
+				</div>
+			</BODY>
+</HTML>

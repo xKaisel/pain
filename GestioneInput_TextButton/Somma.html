@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<link Href="./Stili/Stile.css" rel="stylesheet" type="text/css">
+			<TITLE>
+					Gestione input – Somma
+			</TITLE>
+			<script language="javascript" type="text/javascript">
+				function Addizione()
+				{
+					var num1;
+					num1=document.getElementById("textbox1").value;
+					var num2;
+					num2=document.getElementById("textbox2").value;
+					var somma;
+					somma=Number(num1)+Number(num2);
+					
+					document.getElementById("pOutput").innerText="\nSomma: "+somma;
+				}
+			</script>
+			<BODY>
+				<div id="intestazione">
+				</div>
+				<div id="divsx">
+					<p>
+						<a href="Index.html">Home</a>
+					</p>
+					<p>
+						<a href="Somma.html">Dati Anagrafici</a>
+					</p>
+					<p>
+						<a href="Indovina Numero.html">Indovina Numero</a>
+					</p>
+					<p>
+						<a href="Quattro Operazioni.html">Quattro Operazioni</a>
+					</p>
+					<p>
+						<a href="Area Quadrato.html">Area Quadrato</a>
+					</p>
+					<p>
+						<a href="Perimetro del triangolo rettangolo.html">Perimetro del triangolo rettangolo</a>
+					</p>
+					<p>
+						<a href="Area del rettangolo data la diagonale e l'altezza.html">Area del rettangolo data la diagonale e l’altezza</a>
+					</p>
+					<p>
+						<a href="Operazioni statistiche.html">Operazioni statistiche</a>
+					</p>
+				</div>
+				<div id="divcx">
+						Primo Valore <input type="text" id="textbox1" name="textbox1"/>
+						<br>
+						Secondo Valore <input type="text" id="textbox2" name="textbox2"/>
+						<br>
+						<input type="submit" id="button1" name="button1" value="+" onclick="Addizione()"/>
+						<hr>
+						<p id="pOutput" name="pOutputAddizione">
+						
+						</p>
+				</div>
+				<div id="divdx">
+					<img src="./Immagini/5.jpg" style="width:200px;hight:150px"/>
+				</div>
+			</BODY>
+	</HEAD>
+</HTML>
